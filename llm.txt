@@ -1,0 +1,35 @@
+Il programma è un front-end in React per la gestione di chat con agenti AI.
+La UI è sviluppata con il design system Carbon (IBM). Viene utilizzato il pacchetto `@carbon/react` per i componenti UI.
+Javascript è il linguaggio principale, usato seguendo il Javascript Standard Style per la formattazione del codice.
+
+Segui la richieste per sviluppare singole componenti di UI.
+
+La componente `./src/components/ChatComponent.jsx si occupa di renderizzare una chat con un agente AI.
+La componente utilizza una serie di sotto-componenti (ed eventuali context) presenti in `./src/components/Chat/*` per gestire l'interfaccia utente e le interazioni.
+
+La chat deve includere:
+- Un'area di visualizzazione dei messaggi della chat.
+- Un'area di input per l'inserimento dei messaggi da parte dell'utente.
+- Un pulsante per inviare i messaggi.
+
+La visualizzazione dei messaggi deve mostrare i messaggi dell'utente e le risposte dell'agente AI in modo distinto.
+Ogni messaggio può avere differenti azioni mostrate:
+- sulla actionbar (barra in alto a destra del messaggio; ogni azione è mostrata con un bottone con icona e tooltip)
+- sulla bottombar (barra in basso del messaggio, più visibile e importante della actionbar)
+
+I messaggi degli utenti includono delle azioni per:
+- eliminare il messaggio (su actionbar).
+- modificare il messaggio (su actionbar).
+- refreshare il messaggio (richiedere una nuova risposta all'agente AI) (su actionbar).
+I messaggi dell'agente AI includono delle azioni per:
+- eliminare il messaggio (su actionbar).
+- dare un feedback sul messaggio (pollice su/giù) con un commento opzionale (su bottombar).
+I messaggi dell'agente AI possono includere dei file scaricabili nella risposta (listati sempre sulla bottombar).
+
+La modifica di un messaggio da parte di un utente deve avvenire inline, ovvero direttamente nel blocco del messaggio (e non su overlay).
+
+Non utilizzare CSS custom, metti stili inline se necessario.
+
+Non implementare reducer per la gestione del context della chat, ma utilizza un context semplice per fornire lo stato della chat e le funzioni necessarie ai sotto-componenti.
+
+Sviluppa la componente `./src/components/ChatComponent.jsx` con tutti i sotto-componenti necessari per gestire le funzionalità descritte ed eventuali context per gestire lo stato della chat.
